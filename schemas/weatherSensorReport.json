@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "windSpeed": 4.5,
+            "temperature": 23.5,
+            "feelsLike": "Chilly",
+            "dateTime": "2015-06-20T12:00:00"
+        }
+    ],
+    "required": [
+        "windSpeed",
+        "temperature",
+        "feelsLike",
+        "dateTime"
+    ],
+    "properties": {
+        "windSpeed": {
+            "$id": "#/properties/windSpeed",
+            "type": "number",
+            "title": "The windSpeed schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0.0,
+            "examples": [
+                4.5
+            ]
+        },
+        "temperature": {
+            "$id": "#/properties/temperature",
+            "type": "number",
+            "title": "The temperature schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0.0,
+            "examples": [
+                23.5
+            ]
+        },
+        "feelsLike": {
+            "$id": "#/properties/feelsLike",
+            "type": "string",
+            "title": "The feelsLike schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Chilly"
+            ]
+        },
+        "dateTime": {
+            "$id": "#/properties/dateTime",
+            "type": "string",
+            "title": "The dateTime schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2015-06-20T12:00:00"
+            ]
+        }
+    },
+    "additionalProperties": false
+}

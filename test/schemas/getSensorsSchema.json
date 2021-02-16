@@ -1,0 +1,140 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "sensorData": [
+                {
+                    "id": 2346436,
+                    "sensorId": 2345667,
+                    "windSpeed": 4.5,
+                    "temperature": 23.5,
+                    "feelsLike": "Chilly",
+                    "dateTime": "2015-06-20T12:00:00"
+                }
+            ]
+        }
+    ],
+    "required": [
+        "sensorData"
+    ],
+    "properties": {
+        "sensorData": {
+            "$id": "#/properties/sensorData",
+            "type": "array",
+            "title": "The sensorData schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "id": 2346436,
+                        "sensorId": 2345667,
+                        "windSpeed": 4.5,
+                        "temperature": 23.5,
+                        "feelsLike": "Chilly",
+                        "dateTime": "2015-06-20T12:00:00"
+                    }
+                ]
+            ],
+            "items": {
+                "$id": "#/properties/sensorData/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/sensorData/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "id": 2346436,
+                                "sensorId": 2345667,
+                                "windSpeed": 4.5,
+                                "temperature": 23.5,
+                                "feelsLike": "Chilly",
+                                "dateTime": "2015-06-20T12:00:00"
+                            }
+                        ],
+                        "required": [
+                            "id",
+                            "sensorId",
+                            "windSpeed",
+                            "temperature",
+                            "feelsLike",
+                            "dateTime"
+                        ],
+                        "properties": {
+                            "id": {
+                                "$id": "#/properties/sensorData/items/anyOf/0/properties/id",
+                                "type": "integer",
+                                "title": "The id schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    2346436
+                                ]
+                            },
+                            "sensorId": {
+                                "$id": "#/properties/sensorData/items/anyOf/0/properties/sensorId",
+                                "type": "integer",
+                                "title": "The sensorId schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    2345667
+                                ]
+                            },
+                            "windSpeed": {
+                                "$id": "#/properties/sensorData/items/anyOf/0/properties/windSpeed",
+                                "type": "number",
+                                "title": "The windSpeed schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0.0,
+                                "examples": [
+                                    4.5
+                                ]
+                            },
+                            "temperature": {
+                                "$id": "#/properties/sensorData/items/anyOf/0/properties/temperature",
+                                "type": "number",
+                                "title": "The temperature schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0.0,
+                                "examples": [
+                                    23.5
+                                ]
+                            },
+                            "feelsLike": {
+                                "$id": "#/properties/sensorData/items/anyOf/0/properties/feelsLike",
+                                "type": "string",
+                                "title": "The feelsLike schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Chilly"
+                                ]
+                            },
+                            "dateTime": {
+                                "$id": "#/properties/sensorData/items/anyOf/0/properties/dateTime",
+                                "type": "string",
+                                "title": "The dateTime schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "2015-06-20T12:00:00"
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": true
+}
